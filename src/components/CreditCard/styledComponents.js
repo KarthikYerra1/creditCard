@@ -2,9 +2,11 @@ import styled from 'styled-components'
 
 export const AppContainer = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   height: 100vh;
-  width: 100vw;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
 `
 export const CardContainer = styled.div`
   width: 100%;
@@ -89,7 +91,11 @@ export const InputsContainer = styled.div`
   justify-content: center;
   align-items: center;
   height: 100%;
-  width: 50%;
+  width: 100%;
+  @media screen and (min-width: 768px) {
+    height: 100%;
+    width: 50%;
+  }
 `
 
 export const DetailsContainer = styled.div`
